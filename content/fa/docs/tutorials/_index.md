@@ -1,5 +1,5 @@
 ---
-title: Tutorials
+title: آموزش‌ها
 main_menu: true
 no_list: true
 weight: 60
@@ -8,63 +8,64 @@ content_type: concept
 
 <!-- overview -->
 
-This section of the Kubernetes documentation contains tutorials.
-A tutorial shows how to accomplish a goal that is larger than a single
-[task](/docs/tasks/). Typically a tutorial has several sections,
-each of which has a sequence of steps.
-Before walking through each tutorial, you may want to bookmark the
-[Standardized Glossary](/docs/reference/glossary/) page for later references.
+این بخش از اسناد شامل آموزش کوبرنتیز است.
+این آموزش نشان خواهد داد چه چطور هدفی والاتر از یک  [کار](/docs/tasks/) تکی بدست آوریم. 
+ به طور معمول یک آموزش شامل چندین بخش است،
+که هر بخش شامل مجموعه ای از مراحل استکه باید پشت هم اجرا شوند.
+بهتر است قبل از اینکه وارد هر بخش شوید, این پیج را
+[واژه نامه استاندارد](/docs/reference/glossary/) برای مراجعه داشته باشید.
 
 <!-- body -->
 
-## Basics
+## اصول اولیه
 
-* [Kubernetes Basics](/docs/tutorials/kubernetes-basics/) is an in-depth interactive tutorial that helps you understand the Kubernetes system and try out some basic Kubernetes features.
+* [اصول اولیه کوبرنتیز](/docs/tutorials/kubernetes-basics/) یک آموزش تعاملی عمیق است که به شما کمک می کند تا سیستم کوبرنتیز را بهتر متوجه شوید و برخی از 
+ویژگی های اساسی آن را امتحان کنید.
 
-* [Introduction to Kubernetes (edX)](https://www.edx.org/course/introduction-kubernetes-linuxfoundationx-lfs158x#)
+* [معرفی کوبرنتیز (edX)](https://www.edx.org/course/introduction-kubernetes-linuxfoundationx-lfs158x#)
 
-* [Hello Minikube](/docs/tutorials/hello-minikube/)
+* [آشنایی با minikube](/docs/tutorials/hello-minikube/)
 
-## Configuration
+## تنظیمات
 
-* [Configuring Redis Using a ConfigMap](/docs/tutorials/configuration/configure-redis-using-configmap/)
+* [تنظیم redis با استفاده از  configmap](/docs/tutorials/configuration/configure-redis-using-configmap/)
 
-## Stateless Applications
+## برنامه های کاربردی بدون حالت
 
-* [Exposing an External IP Address to Access an Application in a Cluster](/docs/tutorials/stateless-application/expose-external-ip-address/)
+* [تنظیم یک آدرس برای برقراری دسترسی به یک برنامه کاربردی موجود در خوشه ](/docs/tutorials/stateless-application/expose-external-ip-address/)
 
-* [Example: Deploying PHP Guestbook application with Redis](/docs/tutorials/stateless-application/guestbook/)
+* [مثالی از استقرار یک برنامه PHP با استفاده از Redis](/docs/tutorials/stateless-application/guestbook/)
 
-## Stateful Applications
+## برنامه ها یکاربردب حالت دار
 
-* [StatefulSet Basics](/docs/tutorials/stateful-application/basic-stateful-set/)
+* [اصول اولیه تنطیمات حالت](/docs/tutorials/stateful-application/basic-stateful-set/)
 
-* [Example: WordPress and MySQL with Persistent Volumes](/docs/tutorials/stateful-application/mysql-wordpress-persistent-volume/)
+* [مثالی از wordpress و mysql با فضای ذخیره سازی پایدار](/docs/tutorials/stateful-application/mysql-wordpress-persistent-volume/)
 
-* [Example: Deploying Cassandra with Stateful Sets](/docs/tutorials/stateful-application/cassandra/)
+* [مثالی از استقرار دیتابیس کاساندرا با تنظیمات حالت](/docs/tutorials/stateful-application/cassandra/)
 
-* [Running ZooKeeper, A CP Distributed System](/docs/tutorials/stateful-application/zookeeper/)
+* [اجرای یک سیستم توزیعی cp به نام zookepper](/docs/tutorials/stateful-application/zookeeper/)
 
 ## CI/CD Pipeline
 
-* [Set Up a CI/CD Pipeline with Kubernetes Part 1: Overview](https://www.linux.com/blog/learn/chapter/Intro-to-Kubernetes/2017/5/set-cicd-pipeline-kubernetes-part-1-overview)
+* [تنظیم یک CI/CD Pipeline با استفاده از کوبرنتیز بخش اول: بررسی کلی](https://www.linux.com/blog/learn/chapter/Intro-to-Kubernetes/2017/5/set-cicd-pipeline-kubernetes-part-1-overview)
 
-* [Set Up a CI/CD Pipeline with a Jenkins Pod in Kubernetes (Part 2)](https://www.linux.com/blog/learn/chapter/Intro-to-Kubernetes/2017/6/set-cicd-pipeline-jenkins-pod-kubernetes-part-2)
+* [تنظیم یک CI/CD Pipeline با استفاده از Jenkins در کوبرنتیز (بخش دوم)](https://www.linux.com/blog/learn/chapter/Intro-to-Kubernetes/2017/6/set-cicd-pipeline-jenkins-pod-kubernetes-part-2)
 
-* [Run and Scale a Distributed Crossword Puzzle App with CI/CD on Kubernetes (Part 3)](https://www.linux.com/blog/learn/chapter/intro-to-kubernetes/2017/6/run-and-scale-distributed-crossword-puzzle-app-cicd-kubernetes-part-3)
+* [اجرا و توسعه یک پازل جدول کلمات توزیعی  CI/CD روی بستر کوبرنتیز (بخش سوم)](https://www.linux.com/blog/learn/chapter/intro-to-kubernetes/2017/6/run-and-scale-distributed-crossword-puzzle-app-cicd-kubernetes-part-3)
 
-* [Set Up CI/CD for a Distributed Crossword Puzzle App on Kubernetes (Part 4)](https://www.linux.com/blog/learn/chapter/intro-to-kubernetes/2017/6/set-cicd-distributed-crossword-puzzle-app-kubernetes-part-4)
+* [تنظیم CI/CD برای برنامه پازل جدول کلمات توزیع شده بر روی بستر کوبرنتیز (بخش چهارم)](https://www.linux.com/blog/learn/chapter/intro-to-kubernetes/2017/6/set-cicd-distributed-crossword-puzzle-app-kubernetes-part-4)
 
-## Clusters
+## خوشه ها
 
 * [AppArmor](/docs/tutorials/clusters/apparmor/)
 
-## Services
+## سرویس ها
 
-* [Using Source IP](/docs/tutorials/services/source-ip/)
+* [استفاده از آدرس منبع](/docs/tutorials/services/source-ip/)
 
 ## {{% heading "whatsnext" %}}
 
-If you would like to write a tutorial, see
-[Content Page Types](/docs/contribute/style/page-content-types/)
-for information about the tutorial page type.
+اگر می خواهید یک سند آموزشی بنویسید, این پیج را ببینید
+[انواع محنوای صفحه](/docs/contribute/style/page-content-types/)
+تا اطلاعاتی درباره انواع محتوای صفحه پیدا کنید.
