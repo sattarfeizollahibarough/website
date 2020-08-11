@@ -8,18 +8,18 @@ content_type: concept
 
 <!-- overview -->
 
-این بخش از اسناد شامل آموزش کوبرنتیز است.
-این آموزش نشان خواهد داد چه چطور هدفی والاتر از یک  [کار](/docs/tasks/) تکی بدست آوریم. 
- به طور معمول یک آموزش شامل چندین بخش است،
-که هر بخش شامل مجموعه ای از مراحل استکه باید پشت هم اجرا شوند.
-بهتر است قبل از اینکه وارد هر بخش شوید, این پیج را
+این بخش از مستندات شامل آموزش کوبرنتیز است.
+یک مستند آموزشی نحوۀ رسیدن به یک هدف را در مقایسه با یک انجام یک [کار](/docs/tasks/) تکی را نمایش می‌دهد 
+ به طور معمول یک مستند آموزشی شامل چندین بخش است،
+که هر بخش شامل دانباله‌ای از مراحل است.
+بهتر است قبل از اینکه وارد هر بخش شوید, این صفحه را
 [واژه نامه استاندارد](/docs/reference/glossary/) برای مراجعه داشته باشید.
 
 <!-- body -->
 
 ## اصول اولیه
 
-* [اصول اولیه کوبرنتیز](/docs/tutorials/kubernetes-basics/) یک آموزش تعاملی عمیق است که به شما کمک می کند تا سیستم کوبرنتیز را بهتر متوجه شوید و برخی از 
+* [اصول اولیه کوبرنتیز](/docs/tutorials/kubernetes-basics/) یک مستند آموزشی تعاملی عمیق است که به شما کمک می‌کند تا سیستم کوبرنتیز را بهتر متوجه شوید و برخی از 
 ویژگی های اساسی آن را امتحان کنید.
 
 * [معرفی کوبرنتیز (edX)](https://www.edx.org/course/introduction-kubernetes-linuxfoundationx-lfs158x#)
@@ -36,11 +36,11 @@ content_type: concept
 
 * [مثالی از استقرار یک برنامه PHP با استفاده از Redis](/docs/tutorials/stateless-application/guestbook/)
 
-## برنامه ها یکاربردب حالت دار
+## برنامه‌های کاربردی دارای حالت
 
 * [اصول اولیه تنطیمات حالت](/docs/tutorials/stateful-application/basic-stateful-set/)
 
-* [مثالی از wordpress و mysql با فضای ذخیره سازی پایدار](/docs/tutorials/stateful-application/mysql-wordpress-persistent-volume/)
+* [مثالی از wordpress و mysql با فضای ذخیره‌سازی پایدار](/docs/tutorials/stateful-application/mysql-wordpress-persistent-volume/)
 
 * [مثالی از استقرار دیتابیس کاساندرا با تنظیمات حالت](/docs/tutorials/stateful-application/cassandra/)
 
@@ -56,16 +56,16 @@ content_type: concept
 
 * [تنظیم CI/CD برای برنامه پازل جدول کلمات توزیع شده بر روی بستر کوبرنتیز (بخش چهارم)](https://www.linux.com/blog/learn/chapter/intro-to-kubernetes/2017/6/set-cicd-distributed-crossword-puzzle-app-kubernetes-part-4)
 
-## خوشه ها
+## خوشه‌ها
 
 * [AppArmor](/docs/tutorials/clusters/apparmor/)
 
-## سرویس ها
+## سرویس‌ها
 
 * [استفاده از آدرس منبع](/docs/tutorials/services/source-ip/)
 
 ## {{% heading "whatsnext" %}}
 
-اگر می خواهید یک سند آموزشی بنویسید, این پیج را ببینید
+اگر می‌خواهید یک مستند آموزشی بنویسید, این پیج را ببینید
 [انواع محنوای صفحه](/docs/contribute/style/page-content-types/)
 تا اطلاعاتی درباره انواع محتوای صفحه پیدا کنید.
