@@ -46,7 +46,7 @@ content_type: concept
 
 * [اجرای یک سیستم توزیعی cp به نام zookepper](/docs/tutorials/stateful-application/zookeeper/)
 
-## CI/CD Pipeline
+## CI/CD خط زمانی
 
 * [تنظیم یک CI/CD Pipeline با استفاده از کوبرنتیز بخش اول: بررسی کلی](https://www.linux.com/blog/learn/chapter/Intro-to-Kubernetes/2017/5/set-cicd-pipeline-kubernetes-part-1-overview)
 
