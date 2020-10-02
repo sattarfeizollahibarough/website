@@ -118,29 +118,27 @@ card:
 برای اطلاعات بیشتر راجع به دستور `kubectl` این لینک را مشاهده فرمایید [kubectl overview](/docs/reference/kubectl/overview/).
 {{< /note >}}
 
-## Create a Service
+## ساخت یک سرویس
 
-By default, the Pod is only accessible by its internal IP address within the
-Kubernetes cluster. To make the `hello-node` Container accessible from outside the
-Kubernetes virtual network, you have to expose the Pod as a
-Kubernetes [*Service*](/docs/concepts/services-networking/service/).
+به صورت پیش‌فرض یک Pod تنها به وسیله IP داخلی خودش که در کلاستر کوبرنتیز تعریف شده است قابل دسترسی است.
+برای اینکه کانتینر `hello-node` را قابل دسترسی از خارج شبکه مجازی کوبرنتیز بکنید لازم است که Pod مذکور را
+توسط یک[*Service*](/docs/concepts/services-networking/service/) در اختیار کاربران قرار دهید.
 
-1. Expose the Pod to the public internet using the `kubectl expose` command:
+1. دستور `kubectl expose` یک Pod را به صورت عمومی در اینترنت ارائه میکند:
 
     ```shell
     kubectl expose deployment hello-node --type=LoadBalancer --port=8080
     ```
 
-    The `--type=LoadBalancer` flag indicates that you want to expose your Service
-    outside of the cluster.
+    گزینه `--type=LoadBalancer` مشخص می‌کند که شما قصد دارید تا سرویس مذکور را خارج از کلاستر در دسترس قرار دهید.
 
-2. View the Service you just created:
+2. برای بررسی سرویسی که در حال حاضر آن را در دسترس قرار داده‌اید گزینه زیر استفاده می‌شود:
 
     ```shell
     kubectl get services
     ```
 
-    The output is similar to:
+     خروجی مشابه ذیل خواهد بود:
 
     ```
     NAME         TYPE           CLUSTER-IP      EXTERNAL-IP   PORT(S)          AGE
@@ -148,34 +146,34 @@ Kubernetes [*Service*](/docs/concepts/services-networking/service/).
     kubernetes   ClusterIP      10.96.0.1       <none>        443/TCP          23m
     ```
 
-    On cloud providers that support load balancers,
-    an external IP address would be provisioned to access the Service. On Minikube,
-    the `LoadBalancer` type makes the Service accessible through the `minikube service`
-    command.
+    روی بسترهایی که توسط فراهم‌کننده زیرساخت ابری فراهم شده است،
+    یک IP خارجی برای دسترسی به سرویس تدارک دیده می‌شود. در Minikube نوع
+    `LoadBalancer` باعث ایجاد دسترسی به سرویس توسط دستور `minikube service`
+    خواهد شد.
 
-3. Run the following command:
+3. دستور ذیل را اجرا نمایید:
 
     ```shell
     minikube service hello-node
     ```
 
-4. Katacoda environment only: Click the plus sign, and then click **Select port to view on Host 1**.
+4. فقط در محیط کاتاکودا: بر روی گزینه بلاوه کلیک کرده و سپس بر روی **Select port to view on Host 1** کلیک کنید.
 
-5. Katacoda environment only: Note the 5 digit port number displayed opposite to `8080` in services output. This port number is randomly generated and it can be different for you. Type your number in the port number text box, then click Display Port. Using the example from earlier, you would type `30369`.
+5.  یک عدد پنج رقمی برای پورت ارائه شده است. فقط در محیط کاتاکودا: توجه داشته باشید که در مقابل  `8080`. این عدد به صورت رندم تولید می‌شود و ممکن است این عدد برای شما متفاوت باشد. عددی را که به عنوان شماره پورت ایجاد شده است را در باکس تایپ کنید. برای مثال در این محیط باید عدد `30369`. را تایپ کنید.
 
-    This opens up a browser window that serves your app and shows the app's response.
+    با انجام این کار یک صفحه وب برای شما باز می‌شود که پاسخ سرور را برای شما بازگردانده است.
 
-## Enable addons
+## فعال سازی addons
 
-Minikube has a set of built-in {{< glossary_tooltip text="addons" term_id="addons" >}} that can be enabled, disabled and opened in the local Kubernetes environment.
+Minikube دارای چندین {{< glossary_tooltip text="addons" term_id="addons" >}} فعال، غیرفعال کرد. داخلی است که می‌توان آنها را 
 
-1. List the currently supported addons:
+1. برای دریافت لیست addons های جاری از دستور ذیل استفاده میشود:
 
     ```shell
     minikube addons list
     ```
 
-    The output is similar to:
+     خروجی مشابه ذیل خواهد بود:
 
     ```
     addon-manager: enabled
@@ -197,25 +195,25 @@ Minikube has a set of built-in {{< glossary_tooltip text="addons" term_id="addon
     storage-provisioner-gluster: disabled
     ```
 
-2. Enable an addon, for example, `metrics-server`:
+2. برای فعال سازی addon `metrics-server` دستور ذیل صادر می‌شود:
 
     ```shell
     minikube addons enable metrics-server
     ```
 
-    The output is similar to:
+     خروجی مشابه ذیل خواهد بود:
 
     ```
     metrics-server was successfully enabled
     ```
 
-3. View the Pod and Service you just created:
+3. مشاهده Pod و سرویسی که در حال حاضر ساخته اید:
 
     ```shell
     kubectl get pod,svc -n kube-system
     ```
 
-    The output is similar to:
+     خروجی مشابه ذیل خواهد بود:
 
     ```
     NAME                                        READY     STATUS    RESTARTS   AGE
@@ -238,34 +236,34 @@ Minikube has a set of built-in {{< glossary_tooltip text="addons" term_id="addon
     service/monitoring-influxdb    ClusterIP   10.111.169.94   <none>        8083/TCP,8086/TCP   26s
     ```
 
-4. Disable `metrics-server`:
+4. غیرفعال کردن `metrics-server`:
 
     ```shell
     minikube addons disable metrics-server
     ```
 
-    The output is similar to:
+     خروجی مشابه ذیل خواهد بود:
 
     ```
     metrics-server was successfully disabled
     ```
 
-## Clean up
+## پاک‎سازی
 
-Now you can clean up the resources you created in your cluster:
+حالا می‌توانید منابعی که اختصاص داده اید را پاکسازی کنید:
 
 ```shell
 kubectl delete service hello-node
 kubectl delete deployment hello-node
 ```
 
-Optionally, stop the Minikube virtual machine (VM):
+به صورت اختیاری می‌توانید ماشین مجازی Minikube را متوقف کنید:
 
 ```shell
 minikube stop
 ```
 
-Optionally, delete the Minikube VM:
+به صورت اختیاری می‌توانید ماشین مجازی Minikube را حذف کنید:
 
 ```shell
 minikube delete
@@ -276,6 +274,6 @@ minikube delete
 ## {{% heading "whatsnext" %}}
 
 
-* Learn more about [Deployment objects](/docs/concepts/workloads/controllers/deployment/).
-* Learn more about [Deploying applications](/docs/tasks/run-application/run-stateless-application-deployment/).
-* Learn more about [Service objects](/docs/concepts/services-networking/service/).
+* مطالعه بیشتر در مورد [Deployment objects](/docs/concepts/workloads/controllers/deployment/).
+* مطالعه بیشتر در مورد [Deploying applications](/docs/tasks/run-application/run-stateless-application-deployment/).
+* مطالعه بیشتر در مورد [Service objects](/docs/concepts/services-networking/service/).
